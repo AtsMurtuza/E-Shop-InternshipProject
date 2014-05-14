@@ -3,7 +3,7 @@
 		<title>E-Shop</title>
 		<?php require_once('_css-include.php');?>
 	</head>
-	<body class="container-fluid">
+	<body>
 	<?php require_once('unloggedheader.php');?>
 	<div id="RegistrationDiv">
 		<?php require_once('FirstRegistration.php');?>
@@ -23,4 +23,5 @@
 	<?php require_once('footer.php');?>
 	</body>
 	<?php require_once('_js-include.php');?>
+	
 </html>

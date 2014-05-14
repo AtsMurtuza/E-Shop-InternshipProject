@@ -11,12 +11,12 @@
 		</header>
 		<section class="collapse navbar-collapse" id="collapsibleMenu">
 			<ul class="nav navbar-nav">
-				<li><a href="#"><i class="fa fa-home"></i> Register </a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> About Us</a></li>
-				<li><a href="#"><i class="fa fa-inr"></i> Pricing Plans</a></li>
-				<li><a href="#"><i class="glyphicon glyphicon-thumbs-up"></i> Testimonials</a></li>
-				<li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> FAQ</a></li>
-				<li><a href="#"><i class="fa fa-phone"></i> Talk To Us</a></li>
+				<li><a href="#RegistrationDiv"><i class="fa fa-home"></i> Register </a></li>
+				<li><a href="#AboutUsDiv"><i class="fa fa-map-marker"></i> About Us</a></li>
+				<li><a href="#PricingPlanDiv"><i class="fa fa-inr"></i> Pricing Plans</a></li>
+				<li><a href="#TestimonialDiv"><i class="glyphicon glyphicon-thumbs-up"></i> Testimonials</a></li>
+				<li><a href="#FAQDiv"><i class="glyphicon glyphicon-question-sign"></i> FAQ</a></li>
+				<li><a href="#TalkToUsDiv"><i class="fa fa-phone"></i> Talk To Us</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li style="margin-top:7px;">

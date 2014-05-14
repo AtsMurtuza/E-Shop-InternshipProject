@@ -41,6 +41,7 @@
 		margin-top:-40px;
 		background-color:#D9D9D9;
 		border:2px #D9D9D9 solid;
+		border:2px #D9D9D9 solid;
 		border-radius:5em;
 		width:100px;
 		height:30px;
@@ -75,7 +76,8 @@
 	<div class="col-md-3">
 		<div class="list-group pricing-first">
 			<div class="list-group-item pricing-first-header">
-				<h1>Basic</h1>
+				<h1>Starter</h1>
+				<h2><i class="fa fa-inr"></i> 500/month</h2>
 			</div>
 			<div class="list-group-item">
 				<h4>Get Prices</h4>
@@ -97,6 +99,7 @@
 		<div class="list-group pricing-second">
 			<div class="list-group-item pricing-second-header">
 				<h1>Basic</h1>
+				<h2><i class="fa fa-inr"></i> 1000/month</h2>
 			</div>
 			<div class="list-group-item">
 				<h4>Get Prices</h4>
@@ -117,8 +120,9 @@
 	<div class="col-md-3">
 		<div class="list-group pricing-third">
 			<div class="list-group-item pricing-third-header">
-				<h1>Basic</h1>	
-				<p class="pricing-badge"><i class="fa fa-gift"></i>&nbsp;Offer&nbsp;<i class="fa fa-gift"></i></p>
+				<h1>Professional</h1>
+				<p class="pricing-badge" data><i class="fa fa-gift"></i>&nbsp;Offer&nbsp;<i class="fa fa-gift"></i></p>
+				<h2><i class="fa fa-inr"></i> 2000/month</h2>
 			</div>
 			<div class="list-group-item">
 				<h4>Get Prices</h4>
@@ -139,7 +143,8 @@
 	<div class="col-md-3">
 		<div class="list-group pricing-forth">
 			<div class="list-group-item pricing-forth-header">
-				<h1>Basic</h1>
+				<h1>Executive</h1>
+				<h2><i class="fa fa-inr"></i> 3000/month</h2>
 			</div>
 			<div class="list-group-item">
 				<h4>Get Prices</h4>
