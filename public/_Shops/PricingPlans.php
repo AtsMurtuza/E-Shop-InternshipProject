@@ -31,8 +31,8 @@
 	.pricing-third
 	{
 		text-align:center;
-		border:5px #6883A6 solid;
-		box-shadow: -10px 10px 5px #425369;
+		border:5px #2C3487 solid;
+		box-shadow: -10px 10px 5px #2C3487;
 	}
 	.pricing-badge
 	{
@@ -54,7 +54,7 @@
 	}
 	.pricing-third-header
 	{
-		background-color:#6883A6;
+		background-color:#2C3487;
 		color: white;
 	}
 	.pricing-forth
@@ -72,7 +72,8 @@
 		color:white;
 	}
 </style>
-<div class="col-xs-12" style="min-height:600px;">
+<div class="col-xs-12 bg-info">
+	<h1 style="text-align:center;border-bottom:2px solid gray;padding:10px;">Pricing Plans</h1>
 	<div class="col-md-3">
 		<div class="list-group pricing-first">
 			<div class="list-group-item pricing-first-header">

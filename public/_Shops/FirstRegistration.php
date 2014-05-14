@@ -1,4 +1,4 @@
-<div class="col-xs-10 col-xs-offset-1" style="height:600px;padding-left:100px;top:225;">
+<div class="col-xs-10 col-xs-offset-1 bg-success" style="padding-left:100px;top:230;">
 	<form id="InitRegistration">
 		<div class="form-group col-xs-3">
 			<div class="input-group">
