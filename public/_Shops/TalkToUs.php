@@ -19,7 +19,7 @@
 		</div>
 		<div class="col-xs-7 col-xs-offset-3">
 			<div class="form-group">
-				<label class="col-sm-3">Phone Number</label>
+				<label class="col-sm-3">Mobile Number</label>
 				<div class="col-sm-9">
 					<input type="textbox" class="form-control" id="FeedbackNumber" placeholder="Your Contact Number">
 				</div>
@@ -27,7 +27,7 @@
 		</div>
 		<div class="col-xs-7 col-xs-offset-3">
 			<div class="form-group">
-				<label class="col-sm-3">Discussion</label>
+				<label class="col-sm-3">Query</label>
 				<div class="col-sm-9">
 					<textarea class="form-control" id="FeedbackDiscussion"></textarea>
 				</div>
@@ -36,7 +36,7 @@
 		<div class="col-xs-7 col-xs-offset-3">
 			<div class="form-group">
 				<div class="col-sm-8 col-sm-offset-4">
-					<button class="btn btn-success" type="button" id="FeedbackSubmit">Submit</button>
+					<button class="btn btn-success btn-lg" type="button" id="FeedbackSubmit">Submit</button>
 				</div>
 			</div>
 		</div>
