@@ -81,7 +81,7 @@ class QueryConst
 			$query = preg_replace('/\?/',$arguement,$query,1);
 		}
 		}
-		echo $query;
+		//echo $query;
 		return $query;
 	}
 }
