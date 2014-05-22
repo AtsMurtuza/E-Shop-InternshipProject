@@ -38,7 +38,7 @@
 		Description: Used to generate the query using the parameters and removing sql injection using escape_value function 
 		
 */
-
+require_once('Queries.php');
 class QueryConst
 {
 	private $magic_quotes_active;
@@ -72,15 +72,16 @@ class QueryConst
 		$query = constant($query);
 		if(func_num_args()>1)
 		{
-			$funArgArr = func_get_arg(1);
-			$funCount = count($funArgArr);
-			for($i=0;$i<$funCount;$i++)
-			{						
-				$arguement = $funArgArr[$i];
-				$arguement = $this->escape_value($arguement);
-				$query = preg_replace('/\?/',$arguement,$query,1);
-			}
+		$funArgArr = func_get_Arg(1);
+		$funCount = count($funArgArr);
+		for($i=0;$i<$funCount;$i++)
+		{						
+			$arguement = $funArgArr[$i];
+			$arguement = $this->escape_value($arguement);
+			$query = preg_replace('/\?/',$arguement,$query,1);
 		}
+		}
+		echo $query;
 		return $query;
 	}
 }

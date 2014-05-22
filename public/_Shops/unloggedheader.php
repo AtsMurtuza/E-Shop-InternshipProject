@@ -20,7 +20,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li style="margin-top:7px;">
-					<form class="form-inline" role="form">
+					<form id="HeaderLogin" class="form-inline" role="form">
 						<div class="form-group">
 							<input type="email" class="form-control" name="EmailAddress" id="EmailAddress" placeholder="Email Address">
 						</div>
@@ -34,7 +34,7 @@
 						</div>
 						<button type="submit" class="btn btn-success">Sign in</button>
 						<span>&nbsp;&nbsp;</span>
-					<form>
+					</form>
 				</li>
 			</ul>
 		</section>

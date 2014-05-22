@@ -20,7 +20,51 @@ class User extends DbObject
 		$this->user_id = 0;
 		$this->user_active = 0;
 	}
-	
+	function getUserByEmail()
+	{
+		$result = self::find_by_id("SEARCH_USER_EMAIL",$this->user_email);		
+		if($result!=false && isset($result->user_id))
+		{
+			return $result;
+		}
+		return $this;
+	}
+	function addUser($newPassword,$newActivation)
+	{
+		$this->user_password_hash = md5($newPassword);
+		$this->user_activation_hash = md5($newActivation);
+		$result = self::add_to_db("ADD_USER",$this->user_email,$this->user_password_hash,$this->user_activation_hash);
+		global $db;
+		$this->user_id = $db->insert_id();
+		FunctionalUtility::write_log("User/".$this->user_id , "User Created","The User is Created with email ".$this->user_email);		
+	}
+	function activateUser()
+	{
+		$result = $this->getUserByActivation();
+		if($result!=false && isset($result->user_id))
+		{
+			$result->changeActivationStatus();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function changeActivationStatus()
+	{
+		$result = self::update_to_db("UPDATE_USER_ACTIVATION",$this->user_activation_hash);
+		FunctionalUtility::write_log("User/".$this->user_id , "User Activated","The User is Activated with email ".$this->user_email);		
+	}
+	function getUserByActivation()
+	{
+		$result = self::find_by_id("SEARCH_USER_BY_ACTIVATION",$this->user_activation_hash);
+		if(isset($result->user_email) && $result->user_activation_hash == $this->user_activation_hash)
+		{
+			return $result;
+		}
+		return false;
+	}
 }
 
 ?>
