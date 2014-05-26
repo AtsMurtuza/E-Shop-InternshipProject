@@ -15,6 +15,16 @@ class Category extends DbObject
 		self::$table_name = "category";
 	}
 	
+	public function addCategory(){
+			self::add_to_db("ADD_CATEGORY",$this->parent_id,
+										   $this->category_name,
+										   $this->category_description,
+										   $this->active_bool
+			);
+			global $db;
+			$this->category_id = $db->insert_id();
+	}
+	
 	public static function selectCategory(){
 		$result = self::find_all("CATEGORY_LIST");
 		return $result;
@@ -34,8 +44,7 @@ class Category extends DbObject
 		return $result;
 	}
 	
-	public function getCategoryList()
-	{
+	public function getCategoryList(){
 		$result = self::find_all("FIND_PARENT");
 		return $result;
 	}
