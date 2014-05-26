@@ -5,7 +5,7 @@
 				required: true,
 				minlength: 2,
 				remote: {
-					url: "../../controller/CheckShopName.php",
+					url: "../../../controller/CheckShopName2.php",
 					type: "post",
 					data : {
 						ShopName : function()

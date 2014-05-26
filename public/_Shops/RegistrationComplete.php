@@ -4,48 +4,20 @@
 		<?php require_once('_css-include.php'); ?>
 	</head>
 	<body>
-	<div class="col-xs-12">
-		<h1 style="text-align:center;">E-Shop</h1>
-	</div>
-		<div class="col-xs-6 col-xs-offset-3" style="margin-top:8%;box-shadow: 10px 10px 5px #888888;border:5px solid gray;text-align:center;">
+		<div class="col-xs-6 col-xs-offset-3">
 <?php
 
-	if(isset($_REQUEST["k"]))
+	if($_REQUEST["k"]==1)
 	{
-		if($_REQUEST["k"]==1)
-		{
-			echo '<h1>Thank You <span style="color:#4FFFE7" class="fa fa-smile-o"></span> !!</h1><hr><h4>You have been Successfully Registered with Us. Please check your Email for further notice.<br><br> You will be redirected to shortly to our Login Page.</h4>';
-		}
-		else
-		{
-			echo '<h1>Sorry <span style="color:#FF334F" class="fa fa-frown-o"></span> !!</h1><hr><h4>Something has not worked out. Please check your Email for further notice. <br><br>You will be redirected to shortly to our Login Page.</h4>';
-		}
+		echo '<div class="alert alert-success alert-dismissable">  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  You have been Successfully Registered with Us. Please check your Email for further notice.</div>';
 	}
 	else
 	{
-		echo '<h1>Sorry <span style="color:#FF334F" class="fa fa-frown-o"></span> !!</h1><hr><h4>Something has not worked out. Please check your Email for further notice. <br><br>You will be redirected to shortly to our Login Page.</h4>';
+		echo '<div class="alert alert-danger alert-dismissable"> <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  Something has not worked out. Please check your Email for further notice. </div>';
 	}
-	
+
 ?>
 		</div>
 <?php require_once('_js-include.php'); ?>
-	<script type="text/javascript">
-		function noBack()
-        {
-             window.history.forward()
-        }
-        noBack();
-        window.onload = noBack;
-        window.onpageshow = function(evt) { if (evt.persisted) noBack() }
-        window.onunload = function() { void (0) }
-		$(document).ready(function(){
-		
-		function func_redirect()
-		{
-			window.location.href = "LoginPortal.php";
-		}
-		window.setTimeout( func_redirect, 10000 );
-		});
-	</script>
 	</body>
 </html>

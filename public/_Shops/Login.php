@@ -4,29 +4,20 @@
 		<?php require_once('_css-include.php'); ?>
 	</head>
 	<body>
-		<div class="col-xs-4 col-xs-offset-4">
-		<form class="form-horizontal" id="HeaderLoginForm"role="form">
+		<div class="col-xs-10 col-xs-offset-1">
+		<form class="form-inline" id="HeaderLoginForm"role="form">
 			<div class="form-group">
-				<label class="control-label" for="loginEmail">Email Address</label>
-				<input type="email" class="form-control" id="loginEmail" name="loginEmail">
+				<input type="email" class="form-control" id="loginEmail" name="loginEmail" placeholder="Email Address">
 			</div>
 			<div class="form-group">
-				<label class="control-label" for="loginEmail">Password</label>
-				<input type="password" class="form-control" id="loginPassword" name="loginPassword">
+				<input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password">
 			</div>
-			<div class="form-group">
 			<div class="checkbox">
 				<label>
 				<input id="chk_remember" name="chk_remember" type="checkbox"> Remember me
 				</label>
 			</div>
-			</div>
-			<div class="form-group">
-				<button type="button" id="headerLoginBtn" class="btn btn-success">Sign in</button>
-				or
-				<button type="button" id="headerSignUp" class="btn btn-info">Create New Account</button>
-			</div>
-			
+			<button type="button" id="headerLoginBtn" class="btn btn-success">Sign in</button>
 		</form>
 		</div>
 		<?php require_once('_js-include.php'); ?>
@@ -56,7 +47,7 @@
 				errorPlacement : function(error,element){
 					element.attr('data-container','body');
 					element.attr('data-toggle','popover');
-					element.attr('data-placement','right');
+					element.attr('data-placement','bottom');
 					element.attr('data-html','true');
 					element.attr('data-content',"<i style='color:red' class='fa fa-exclamation-triangle'></i>&nbsp;" + error.text());
 					element.popover('show');
@@ -66,9 +57,6 @@
 		</script>
 		
 		<script type="text/javascript">
-			$("#headerSignUp").click(function (){
-				window.location.href = "FirstRegistration.php";
-			});
 			$("#headerLoginBtn").click(function (){
 				if($("#HeaderLoginForm").valid())
 				{

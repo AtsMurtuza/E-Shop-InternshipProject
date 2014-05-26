@@ -1,5 +1,4 @@
 <?php
-	require_once('../model/UserModel.php');
 	require_once('../model/ShopModel.php');
 	require_once('../model/ShopOwnerModel.php');
 	require_once('../model/ShopSessionModel.php');
@@ -18,7 +17,7 @@
 		if(isset($shop->shop_id))
 		{
 			global $shop_session;
-			$shop_session->login($shop->shop_id,$user->user_email);
+			$shop_session->login($shop);
 			echo 'true';
 		}
 		else
