@@ -23,20 +23,22 @@
 	$shop->shop_supplier_id = $shop_owner->supplier_id;
 	$shop->shop_activation_hash=md5($newActivation);
 	$shop->addShop();
-	
+	/*
 	$newMail = new MailModel();
 	$sendAddress = array();
 	$sendAddress[] = $user->user_email;
 	$msgbody="<h1>Welcome to E-Shop,</h1> <hr> <p>Your default password set is {$newPassword}. <br>Your activation link is as follows<br> <a href='localhost/Backend-Ecom/public/_Shops/Activate.php?key={$newActivation}'> ACTIVATE </a></p><hr>";
 	$msgbodyalt="HTML not visible.\n\n Your default password is {$newPassword} \n\n go to localhost/Backend-Ecom/public/_Shops/Activate.php?key={$newActivation} to activate your account ";
 	$mailresult = $newMail->sendMailData($sendAddress,"Welcome to E-Shop",$msgbody,$msgbodyalt);
-	if($mailresult == true)
-	{
+	*/
+	
+	//if($mailresult == true)
+	//{
 		echo "true";
-	}
-	else
-	{
-		echo "false";
-	}
+	//}
+	//else
+	//{
+	//	echo "false";
+	//}
 	
 ?>

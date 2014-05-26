@@ -20,19 +20,19 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li style="margin-top:7px;">
-					<form id="HeaderLogin" class="form-inline" role="form">
+					<form id="HeaderLoginForm" class="form-inline" role="form">
 						<div class="form-group">
-							<input type="email" class="form-control" name="EmailAddress" id="EmailAddress" placeholder="Email Address">
+							<input type="email" class="form-control" name="loginEmail" id="loginEmail" placeholder="Email Address">
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" name="Password" id="Password" placeholder="Password">
+							<input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Password">
 						</div>
 						<div class="checkbox">
 							<label style="color:white;">
 							<input type="checkbox"> Remember me
 							</label>
 						</div>
-						<button type="submit" class="btn btn-success">Sign in</button>
+						<button type="button" id="headerLoginBtn" class="btn btn-success">Sign in</button>
 						<span>&nbsp;&nbsp;</span>
 					</form>
 				</li>

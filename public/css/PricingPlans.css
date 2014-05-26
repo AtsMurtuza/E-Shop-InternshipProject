@@ -1,0 +1,72 @@
+.pricing-first
+	{
+		text-align:center;
+	}
+	.pricing-first:hover
+	{
+		border:5px #F2EDA7 solid;
+		box-shadow: -10px 10px 5px #F2F8DC;
+	}
+	.pricing-first-header
+	{
+		background-color:#F2EDA7;
+		color: black;
+	}
+	
+	.pricing-second
+	{
+		text-align:center;
+	}
+	.pricing-second:hover
+	{
+		border:5px #F2D49B solid;
+		box-shadow: -10px 10px 5px #F2CD85;
+	}
+	.pricing-second-header
+	{
+		background-color:#F2D49B;
+		color: black;
+	}
+	.pricing-third
+	{
+		text-align:center;
+		border:5px #2C3487 solid;
+		box-shadow: -10px 10px 5px #2C3487;
+	}
+	.pricing-badge
+	{
+		color:#88C1F2;
+		font-size:18px;
+		margin-top:-40px;
+		background-color:#D9D9D9;
+		border:2px #D9D9D9 solid;
+		border:2px #D9D9D9 solid;
+		border-radius:5em;
+		width:100px;
+		height:30px;
+		position:relative;
+		top:-23;
+		right:-225;
+		-ms-transform: rotate(45deg); /* IE 9 */
+		-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+		transform: rotate(45deg);
+	}
+	.pricing-third-header
+	{
+		background-color:#2C3487;
+		color: white;
+	}
+	.pricing-forth
+	{
+		text-align:center;
+	}
+	.pricing-forth:hover
+	{
+		border:5px #233559 solid;
+		box-shadow: -10px 10px 5px #3E5E9E;
+	}
+	.pricing-forth-header
+	{
+		background-color:#233559;
+		color:white;
+	}
