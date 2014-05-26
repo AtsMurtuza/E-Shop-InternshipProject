@@ -75,6 +75,7 @@
 				<li><a href="#">Category</a></li>
 				<li class="active">Add Category</li>
 			</ol>
+			<div id="requestresult"></div>
 		 <form id="SingleProd" class="horizontal-form" role="form">
 			<div class="col-md-12">
 				<div class="panel panel-primary">
@@ -89,7 +90,7 @@
 								Select Parent <span class="caret"></span>
 							  </button>
 							  <ul id ="CategorySelect" name="CategorySelect" class="dropdown-menu multi-level" role="menu" style="text-align:left;">
-								
+								<li data-val="0"><a id="0" class="dropli">Master</a></li>
 							  </ul>
 							</div>
 						</div>
@@ -125,7 +126,10 @@
 		<?php require_once('_js-include.php'); ?>
 		<script type="text/javascript">
 		
-			$(document).ready(function(){
+			$(document).ready(jsonCategory());
+			
+			
+			function jsonCategory(){
 				var ajxr = $.post("../../controller/ParentCategory.php",function(data){
 					//$('#trialJson').html(data);
 					
@@ -155,7 +159,7 @@
 						}
 					});
 				});		
-			});
+			}
 			
 			$(document).on("click",".dropli",function(){
 				//alert($(this).html());
@@ -172,7 +176,7 @@
 					CategoryName:{
 						required: true,
 						remote: {
-							url: "../../controller/AddCategory.php",
+							url: "../../controller/CheckCategory.php",
 							type: "post",
 							data : {
 								category_name : function()
@@ -207,10 +211,31 @@
 			});
 		
 		$("#saveCategory").click(function(){
-			if($("#SingleProd").valid()){
-				
+			if($("#SingleProd").valid() && $("#category_name_btn").attr('data-val'))
+			{
+				var jpost = $.post("../../controller/AddCategory.php",{
+					CategoryName:$("#CategoryName").val(),
+					CategoryDescription:$("#CategoryDescription").val(),
+					ParentID:$("#category_name_btn").attr('data-val')},
+					function(data){
+						$('#requestresult').removeClass();
+						$('#requestresult').addClass('alert alert-success');
+						$('#requestresult').html('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  <h4 style="text-align:center;"> Cool ! You Just Added A New Category : <b>' + $("#CategoryName").val() + '</b></h4>');
+						$("#CategoryName").val("");
+						$("#CategoryDescription").val("");
+						$("#category_name_btn").html('Select Parent  <span class="caret"></span>');
+						$('#category_name_btn').attr('class','btn btn-danger btn-lg dropdown-toggle');
+						$('#CategorySelect').html('<li data-val="0"><a id="0" class="dropli">Master</a></li>');
+						jsonCategory();
+					}); 
+			}
+			else
+			{
+				$('#requestresult').removeClass();$('#requestresult').addClass('alert alert-danger');
+				$('#requestresult').html('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>  <h4 style="text-align:center;">Sorry You Need To Select A Parent</h4>');
+						
 			}
 		});
 		</script>
 	</body>
-</html>
+</html> 
