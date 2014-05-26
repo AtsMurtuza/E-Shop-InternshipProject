@@ -11,7 +11,7 @@
 				<input type="email" class="form-control" id="loginEmail" name="loginEmail">
 			</div>
 			<div class="form-group">
-				<label class="control-label" for="loginEmail">Password</label>
+				<label class="control-label" for="loginPassword">Password</label>
 				<input type="password" class="form-control" id="loginPassword" name="loginPassword">
 			</div>
 			<div class="form-group">
@@ -31,66 +31,6 @@
 		</div>
 		<?php require_once('_js-include.php'); ?>
 		<!--Page Specific JS-->
-		<script type="text/javascript">
-			$("#HeaderLoginForm").validate({
-				onkeyup: false,
-				onfocusout: false,
-				rules:{
-					loginEmail:{
-						required: true,
-						email:true
-					},
-					loginPassword:{
-						required: true,
-					}
-				},
-				messages:{
-					loginEmail:{
-						required: "Please Enter Your Email Address",
-						email: "Please Enter A Valid Email Address"
-					},
-					loginPassword:{
-						required: "Please Enter Your Password",
-					}
-				},
-				errorPlacement : function(error,element){
-					element.attr('data-container','body');
-					element.attr('data-toggle','popover');
-					element.attr('data-placement','right');
-					element.attr('data-html','true');
-					element.attr('data-content',"<i style='color:red' class='fa fa-exclamation-triangle'></i>&nbsp;" + error.text());
-					element.popover('show');
-				}
-				
-			});
-		</script>
-		
-		<script type="text/javascript">
-			$("#headerSignUp").click(function (){
-				window.location.href = "FirstRegistration.php";
-			});
-			$("#headerLoginBtn").click(function (){
-				if($("#HeaderLoginForm").valid())
-				{
-				$(this).attr("disabled","disabled");
-				var ats_jpost = $.post( "../../controller/ValidateLogin.php", {Email:$("#loginEmail").val() , Password:$("#loginPassword").val()} , function(data){
-					if(data=="true")
-					{
-						window.location.href = "Home.php";
-					}
-					else
-					{
-						window.location.href = "LoginPortal.php?key="+ data;
-					}
-				})
-				.fail(function(){
-					window.location.href = "LoginPortal.php";
-				});
-				}
-				$(this).removeAttr("disabled");
-				
-				});
-		
-		</script>
+		<script src="../js/pages/Login.js"></script>
 	</body>
 </html>
