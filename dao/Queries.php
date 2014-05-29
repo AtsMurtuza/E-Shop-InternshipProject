@@ -19,5 +19,7 @@ defined('CHECK_CATEGORY') ? null : define('CHECK_CATEGORY',"SELECT * FROM `categ
 defined('FIND_PARENT') ? null : define('FIND_PARENT',"SELECT * FROM `category` where `category_id`!=0 ORDER BY `parent_id` asc;");
 defined('ADD_CATEGORY') ? null : define('ADD_CATEGORY'," INSERT INTO `category`(`parent_id`, `category_name`, `category_description`, `active_bool`) VALUES ('?','?','?','?');");
 
-
+defined('ADD_GIFT_COUPON') ? null : define('ADD_GIFT_COUPON'," INSERT INTO `giftcoupon`(`shop_id`, `gift_coupon_code`, `expiry_date`, `value`) VALUES ('?','?','?','?');");
+defined('ADD_DISCOUNT_COUPON') ? null : define('ADD_DISCOUNT_COUPON'," INSERT INTO `discountcoupon`(`shop_id`, `discount_coupon_code`, `expiry_date`, `percentage_value`, `cash_value`) VALUES ('?','?','?','?','?');");
+defined('ADD_DEALS') ? null : define('ADD_DEALS'," INSERT INTO `deals`(`shop_id`, `product_id`,`expiry_date`,`buy`,`get`)VALUES ('?','?','?','?','?');");
 ?>
