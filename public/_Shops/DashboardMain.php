@@ -34,7 +34,7 @@
                 <li><a href="#"><i class="fa fa-file-text"></i> Order History</a></li>
               </ul>
             </li>
-			<li><a href="#"><i class="fa fa-truck"></i> Shipping</a></li>
+			<li><a href="Shipping.php"><i class="fa fa-truck"></i> Shipping</a></li>
 			<li><a href="#"><i class="fa fa-comments-o"></i> Feedback</a></li>
 			<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart-o"></i> Analysis <b class="caret"></b></a>
