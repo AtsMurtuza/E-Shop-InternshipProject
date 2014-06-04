@@ -12,10 +12,10 @@
 		<section class="collapse navbar-collapse" id="collapsibleMenu">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a id="HeaderLogin" href="#"><i class="fa fa-home"></i> My Account </a></li>
-				<li><a href="#"><i class="fa fa-home"></i> Combos </a></li>
-				<li><a href="#"><i class="fa fa-home"></i> Shops </a></li>
-				<li><a href="#"><i class="fa fa-home"></i> Gift Coupons </a></li>
-				<li><a href="#"><i class="fa fa-home"></i> Help </a></li>
+				<li><a href="#"><i class="fa fa-tags"></i> Combos </a></li>
+				<li><a href="#"><i class="fa fa-briefcase"></i> Shops </a></li>
+				<li><a href="#"><i class="fa fa-money"></i> Gift Coupons </a></li>
+				<li><a href="#"><i class="fa fa-question-circle"></i> Help </a></li>
 			</ul>
 		</section>
 	</nav>
