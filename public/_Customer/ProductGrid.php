@@ -41,70 +41,20 @@
 		</style>
 	</head>
 	<body class="container-fluid">
-	<div class="col-xs-2 panel-group" style="padding:0;height:600px">
-		<div class="panel panel-success" style="margin:0px;max-height:150px;width:100%;">	
-			<div class="panel-heading" style="text-align:center;">
-				<h2 style="padding-bottom:5px;"><i class="fa fa-shopping-cart"></i></h2>
-				<a id="x1" href="#" style="color:white"><h4>Your Cart has 3 Items</h4></a>
+	<div class="col-xs-2" style="height:600px">
+		<div class="panel panel-success">
+			<div class="panel-heading" style="height:100%;width:100%;text-align:center;">
+				<h1 style="margin-top:220px"><i class="fa fa-shopping-cart"></i></h1>
+				<br>
+				<h4>Your Cart is Empty</h4>
 			</div>
 		</div>
-		<div id="x2" dim-vis="2" class="panel panel-success" style="margin:0px;width:100%;max-height:480px;overflow-y:auto;">
-			<table  class="table table-bordered table-hover" style="text-align:center;">
-				<tr style="display:none;">
-					<th></th>
-					<th>Product Name</th>
-					<th>Quantity</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-				<tr>
-					<td><h4><a href="#" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td>
-					<td><h4>Casio Watch</h4></td>
-					<td><h4>1</h4></td>
-					<td><h4><a href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>
-				</tr>
-			</table>
-		</div>
 	</div>
-	<div class="col-xs-8">
+	
+	<div class="col-xs-8" id="PageBody">
 		<div class="col-xs-4">
-			<div class="panel panel-primary">
-				<div class="panel-body">
+			<div class="panel panel-primary ">
+				<div class="panel-body productdraggable">
 					<div class="col-xs-12">
 						<a class="thumbnail" href="#">
 							<img src="../images/casio1.jpeg" style="max-height:250px;">
@@ -129,7 +79,7 @@
 		</div>
 		<div class="col-xs-4">
 			<div class="panel panel-primary">
-				<div class="panel-body">
+				<div class="panel-body productdraggable">
 					<div class="col-xs-12">
 						<a class="thumbnail" href="#">
 							<img src="../images/casio1.jpeg" style="max-height:250px;">
@@ -154,7 +104,7 @@
 		</div>
 		<div class="col-xs-4">
 			<div class="panel panel-primary">
-				<div class="panel-body">
+				<div class="panel-body productdraggable">
 					<div class="col-xs-12">
 						<a class="thumbnail" href="#">
 							<img src="../images/casio1.jpeg" style="max-height:250px;">
@@ -178,20 +128,33 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-2" style="height:600px">
-		<div class="panel panel-success">
-			<div class="panel-heading" style="height:100%;width:100%;text-align:center;">
-				<h1 style="margin-top:220px"><i class="fa fa-shopping-cart"></i></h1>
-				<br>
-				<h4>Your Cart is Empty</h4>
+	<div class="col-xs-2 panel-group" style="padding:0;height:600px">
+		<div class="dropzone panel panel-success" style="margin:0px;max-height:150px;width:100%;">	
+			<div class="panel-heading" style="text-align:center;">
+				<h2 style="padding-bottom:5px;"><i class="fa fa-shopping-cart"></i></h2>
+				<a id="x1" href="#" style="color:white"><h4>Your Cart has 3 Items</h4></a>
 			</div>
+		</div>
+		<div id="x2" dim-vis="2" class="panel panel-success" style="margin:0px;width:100%;max-height:480px;overflow-y:auto;">
+			<table  id="x4" class="table table-bordered table-hover" style="text-align:center;">
+				
+			</table>
 		</div>
 	</div>
 	</body>
 	<?php require_once('_js-include.php');?>
 	<!--Page Specific JS -->
 	<script type="text/javascript">
-		
+		$('.productdraggable').draggable({scroll:false,revert:true,zIndex:2000,cursorAt:{left:10,right:10,top:10},container:"body",helper:function(){return $('<div class="bg-primary" style="border:2px solid green;padding:2px"><h4>Casio Watch</h4></div>');},opacity:"1"});
+		function ()
+		{
+			var x = $('.addqt').parent('tr').find('qtnumb');
+		}		
+		$(".dropzone").droppable({
+			drop: function( event, ui ){
+				$( "<tr></tr>" ).html( '<td><h4><a href="#" class="addqt" style="color:green"><i class="fa fa-plus"></i></a></h4><h4><a class="subqt" href="#" style="color:orange"><i class="fa fa-minus"></i></a></h4></td><td><h4>Casio Watch</h4></td><td><h4 class="qtnum">1</h4></td><td><h4><a class="rmqt" href="#" style="color:red"><i class="fa fa-times"></i></a></h4></td>').appendTo( $("#x4"));
+			}
+		});
 		function togcart(){
 			if($('#x2').attr('dim-vis')=='1')
 			{
