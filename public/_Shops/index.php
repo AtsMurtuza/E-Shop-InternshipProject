@@ -7,16 +7,16 @@
 	</head>
 	<body>
 	<?php require_once('unloggedheader.php');?>
-	<div id="RegistrationDiv" style="min-height:650px;margin-top:-70px;"class="bg-success">
+	<div id="RegistrationDiv" style="min-height:650px;margin-top:-70px;background-image:url('../images/BG1.jpg');background-size:100%;background-repeat:no-repeat;">
 		<?php require_once('FirstRegistration.php');?>	
 	</div>
-	<div id="AboutUsDiv"  style="min-height:650px;margin-top:1px;" class="bg-warning">
+	<div id="AboutUsDiv"  style="min-height:650px;margin-top:1px;background-image:url('../images/BG2.jpg');background-size:100%;background-repeat:no-repeat;">
 		<?php require_once('AboutUs.php');?>
 	</div>
-	<div id="PricingPlanDiv" style="min-height:650px;margin-top:1px;" class="bg-info">
+	<div id="PricingPlanDiv" style="min-height:650px;margin-top:1px;background-image:url('../images/BG3.jpg');background-size:100%;background-repeat:no-repeat;">
 		<?php require_once('PricingPlans.php');?>
 	</div>
-	<div id="TestimonialDiv" style="min-height:650px;margin-top:1px;" class="bg-success">
+	<div id="TestimonialDiv" style="min-height:650px;margin-top:1px;background-image:url('../images/BG4.jpg');background-size:100%;background-repeat:no-repeat;">
 		<?php require_once('Testimonials.php');?>
 	</div>
 	<div id="FAQDiv" style="min-height:650px;margin-top:1px;" class="bg-warning">
