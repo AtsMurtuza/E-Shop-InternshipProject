@@ -1,4 +1,4 @@
-<div class="col-xs-12 bg-info">
+<div class="col-xs-12">
 	<h1 style="text-align:center;border-bottom:2px solid gray;padding:10px;">Pricing Plans</h1>
 	<div class="col-xs-3">
 		<div class="list-group pricing-first">

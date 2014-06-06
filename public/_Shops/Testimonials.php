@@ -1,4 +1,4 @@
-<div class="col-xs-12 bg-success">
+<div class="col-xs-12">
 	<h1 style="text-align:center;border-bottom:2px solid gray;padding:10px;">Testimonials</h1>
 	<ul class="media-list">
 	<li class="media">

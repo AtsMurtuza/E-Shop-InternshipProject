@@ -7,6 +7,6 @@
 <style type="text/css">
 	body
 	{	
-		width:1500px;
+		width:1518px;
 	}
 </style>
