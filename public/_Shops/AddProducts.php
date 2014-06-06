@@ -46,7 +46,7 @@
 							</div>
 							<div class="form-group">
 								<label for="dropdown">Category</label>
-								<select id="CategorySelect" name ="CategorySelect" class="form-control" required>
+								<select id="CategorySelect" name ="CategorySelect" class="form-control">
 								</select>
 							</div>
 							<div class="form-group">
