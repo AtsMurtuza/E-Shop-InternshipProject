@@ -22,6 +22,6 @@ defined('ADD_CATEGORY') ? null : define('ADD_CATEGORY'," INSERT INTO `category`(
 defined('ADD_GIFT_COUPON') ? null : define('ADD_GIFT_COUPON'," INSERT INTO `giftcoupon`(`shop_id`, `gift_coupon_code`, `expiry_date`, `value`) VALUES ('?','?','?','?');");
 defined('ADD_DISCOUNT_COUPON') ? null : define('ADD_DISCOUNT_COUPON'," INSERT INTO `discountcoupon`(`shop_id`, `discount_coupon_code`, `expiry_date`, `percentage_value`, `cash_value`) VALUES ('?','?','?','?','?');");
 defined('ADD_DEALS') ? null : define('ADD_DEALS'," INSERT INTO `deals`(`shop_id`, `product_id`,`expiry_date`,`buy`,`get`)VALUES ('?','?','?','?','?');");
-defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_name`, `product_mrp`,`unit_in_stock`,`product_ranking` FROM `product`;")
+defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_id`, `category_id` ,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` FROM `product`;")
 
 ?>

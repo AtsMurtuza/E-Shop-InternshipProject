@@ -2,7 +2,7 @@
 	require_once('../model/ProductModel.php');
 	$product = new Product();
 	$product->product_name = $_POST["ProductName"];
-	$product->category_id = $_POST["CategorySelect"];
+	$product->category_id = 0;
 	$product->product_description = $_POST["ProductDescription"];
 	$product->supplier_id = 0;
 	$product->unit_price = $_POST["UnitPrice"];
@@ -32,10 +32,10 @@
 	  if ($_FILES["file"]["error"] > 0) {
 		echo "Error: " . $_FILES["file"]["error"] . "<br>";
 	  } else {
-	  if(!is_dir("../ProductImages/".$product->supplier_id."/".$product->product_id)){
-			mkdir("../ProductImages/".$product->supplier_id."/".$product->product_id);
+	  if(!is_dir("../public/images/ProductImages/".$product->product_id)){
+			mkdir("../public/images/ProductImages/".$product->product_id);
 		}
-		$target = '../ProductImages/'.$product->supplier_id.'/'.$product->product_id.'/'.$newname;
+		$target = '../public/images/ProductImages/'.$product->product_id.'/'.$newname;
 		echo $target;
 		move_uploaded_file( $_FILES['file']['tmp_name'], $target);
 	  }
