@@ -52,6 +52,12 @@ class Product extends DbObject
 		
 	}
 	
+	function getProducts(){
+		$result = self::find_all("PRODUCT_LIST");
+		return $result;
+	
+	}
+	
 }
 
 ?>

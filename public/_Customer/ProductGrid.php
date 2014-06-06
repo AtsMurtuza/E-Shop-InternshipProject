@@ -102,6 +102,7 @@
 		</div>
 	</div>
 	<div class="col-xs-8">
+	
 		<div class="col-xs-4">
 			<div class="panel panel-primary">
 				<div class="panel-body">
@@ -111,7 +112,7 @@
 						</a>
 					</div>
 					<div class="col-xs-12" style="margin-top:-15px;border-bottom:1px solid gray">
-						<h4><a href="">Casio Watch</a></h3>
+						<h4><a href=""></a></h3>
 					</div>
 					<div class="col-xs-12">
 						<h4>Price : <i class="fa fa-rupee"></i>&nbsp;6000</h4>
@@ -127,7 +128,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-4">
+		
+<!--		<div class="col-xs-4">
 			<div class="panel panel-primary">
 				<div class="panel-body">
 					<div class="col-xs-12">
@@ -176,8 +178,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 	</div>
+	
 	<div class="col-xs-2" style="height:600px">
 		<div class="panel panel-success">
 			<div class="panel-heading" style="height:100%;width:100%;text-align:center;">
@@ -187,6 +190,7 @@
 			</div>
 		</div>
 	</div>
+	<div id="test"></div>
 	</body>
 	<?php require_once('_js-include.php');?>
 	<!--Page Specific JS -->
@@ -208,6 +212,9 @@
 			togcart();
 		});
 		$(document).ready(function (){
+			var ats = $.post("../../controller/FillProduct.php",function(data){
+				$("#test").html(data);
+			});
 			$('#x1').click();
 		});
 		
