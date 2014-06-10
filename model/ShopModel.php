@@ -68,6 +68,15 @@ class Shop extends DbObject
 		}
 		return $this;
 	}
+	function getShopById()
+	{
+		$result = self::find_by_id("SEARCH_SHOPID",$this->shop_id);
+		if(isset($result->shop_name) && $result->shop_id==$this->shop_id)
+		{
+			return $result;
+		}
+		return $this;
+	}
 }
 
 ?>

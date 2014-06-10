@@ -20,7 +20,7 @@ class Product extends DbObject
 	public $discount;
 	public $unit_in_order;
 	public $product_ranking;
-	
+	public $shop_name;
 	
 	
 	function __construct(){
