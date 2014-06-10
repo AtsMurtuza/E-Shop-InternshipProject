@@ -2,7 +2,7 @@
 	require_once('../model/ProductModel.php');
 	$product = new Product();
 	$product->product_name = $_POST["ProductName"];
-	$product->category_id = 0;
+	$product->category_id = $_POST["CategorySelect"];
 	$product->product_description = $_POST["ProductDescription"];
 	$product->supplier_id = 0;
 	$product->unit_price = $_POST["UnitPrice"];

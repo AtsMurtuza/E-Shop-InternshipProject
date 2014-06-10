@@ -83,7 +83,7 @@
 					</div>
 					<div class="panel-body">
 						<table class="table table-bordered" style="text-align:center">
-							<tr class="" >
+							<tr>
 								<td rowspan="2"><b>Order Details<b></th>
 								<td class="success" colspan="3"><b>Status</b></th>
 							</tr>
@@ -113,7 +113,12 @@
 	</div>
 		<?php require_once('_js-include.php'); ?>
 		<script type="text/javascript">
+		$(document).ready(function(){
+			var ats = $.post("../../controller/GetOrder.php",function(data){
+				alert(data);
+			});
 		
+		});
 			
 		</script>
 	</body>

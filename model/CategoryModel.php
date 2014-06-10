@@ -26,7 +26,7 @@ class Category extends DbObject
 	}
 	
 	public static function selectCategory(){
-		$result = self::find_all("CATEGORY_LIST");
+		$result = self::find_all("FIND_PARENT");
 		return $result;
 	}
 	
