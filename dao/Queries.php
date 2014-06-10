@@ -22,6 +22,8 @@ defined('ADD_CATEGORY') ? null : define('ADD_CATEGORY'," INSERT INTO `category`(
 defined('ADD_GIFT_COUPON') ? null : define('ADD_GIFT_COUPON'," INSERT INTO `giftcoupon`(`shop_id`, `gift_coupon_code`, `expiry_date`, `value`) VALUES ('?','?','?','?');");
 defined('ADD_DISCOUNT_COUPON') ? null : define('ADD_DISCOUNT_COUPON'," INSERT INTO `discountcoupon`(`shop_id`, `discount_coupon_code`, `expiry_date`, `percentage_value`, `cash_value`) VALUES ('?','?','?','?','?');");
 defined('ADD_DEALS') ? null : define('ADD_DEALS'," INSERT INTO `deals`(`shop_id`, `product_id`,`expiry_date`,`buy`,`get`)VALUES ('?','?','?','?','?');");
-defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_id`, `category_id` ,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` FROM `product`;")
-
+defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_id`, `category_id` ,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` FROM `product`;");
+defined('ADD_ORDER') ? null : define('ADD_ORDER',"INSERT INTO `orders`(`customer_id`, `payment_id`, `shipper_id`, `tax_order`, `time_stamp`, `transaction_status`, `payment_date`, `total`) VALUES ('?','?','?','?','?','?','?','?');");
+defined('ADD_ORDER_DETAIL') ? null : define('ADD_ORDER_DETAIL',"INSERT INTO `orderdetails`(`product_id`, `price`, `quantity`, `discount`, `ship_date`, `order_id`) VALUES ('?','?','?','?','?','?');");
+defined('GET_ORDER') ? null :define ('GET_ORDER',"SELECT `order_id`, `customer_id`, `payment_id`, `shipper_id`, `tax_order`, `time_stamp`, `transaction_status`, `payment_date`, `total` FROM `orders` WHERE `shipper_id` = ?;");
 ?>
