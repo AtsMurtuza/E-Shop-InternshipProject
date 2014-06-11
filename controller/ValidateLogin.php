@@ -1,8 +1,12 @@
 <?php
-	require_once('../model/UserModel.php');
-	require_once('../model/ShopModel.php');
-	require_once('../model/ShopOwnerModel.php');
-	require_once('../model/ShopSessionModel.php');
+	
+	defined('DS')?null : define('DS','/');
+	defined('SITE_ROOT')?null:define('SITE_ROOT',DS.'wamp'.DS.'www'.DS.'E-Shop-InternshipProject');
+
+	require_once(SITE_ROOT.'/model/UserModel.php');
+	require_once(SITE_ROOT.'/model/ShopModel.php');
+	require_once(SITE_ROOT.'/model/ShopOwnerModel.php');
+	require_once(SITE_ROOT.'/model/ShopSessionModel.php');
 	
 	$shopowner = new Supplier();
 	$user = new User();

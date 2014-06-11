@@ -1,5 +1,8 @@
 <?php
-require_once('../util/FunctionUtil.php');
+defined('DS')?null : define('DS','/');
+defined('SITE_ROOT')?null:define('SITE_ROOT',DS.'wamp'.DS.'www'.DS.'E-Shop-InternshipProject');
+
+require_once(SITE_ROOT.'/util/FunctionUtil.php');
 
 class ShopSession
 {

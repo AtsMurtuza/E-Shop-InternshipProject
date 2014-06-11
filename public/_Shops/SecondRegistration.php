@@ -76,6 +76,11 @@
 				<li class="active">Add Category</li>
 			</ol>
 			<div class="col-xs-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Second
+				</div>
+				<div class="panel-body">
 				<form  class="form-horizontal" id="SecondRegistration">
 					<div class="form-group">
 						<div class="col-md-2 col-md-offset-2" style="text-align:right;">
@@ -148,6 +153,8 @@
 						</div>
 					</div>
 				</form>
+			</div>
+			</div>
 			</div>
 		</div>
 		

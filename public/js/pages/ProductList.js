@@ -3,5 +3,8 @@ $(document).ready(function (){
 		//alert(data);
 		productjson2(data);
 	});
+	var ajxr = $.post('../../controller/ShowCart.php',function(data){
+		populateCart(data);
+	});
 	$('#x1').click();
 });

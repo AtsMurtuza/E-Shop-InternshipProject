@@ -1,3 +1,13 @@
+<?php
+	defined('DS')?null : define('DS','/');
+	defined('SITE_ROOT')?null:define('SITE_ROOT',DS.'wamp'.DS.'www'.DS.'E-Shop-InternshipProject');
+
+	require_once(SITE_ROOT.'/model/ShopSessionModel.php');
+	if(!$shop_session->is_logged_in())
+	{
+		FunctionalUtility::redirect_to('LoginPortal.php');
+	}
+?>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -12,7 +22,7 @@
           <ul class="nav navbar-nav side-nav">
             <li><a href="#"><i class="fa fa-desktop"></i> Dashboard</a></li>
 			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-barcode"></i> Products <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-barcode"></i>&nbsp;&nbsp;Products <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="AddProducts.php"><i class="fa fa-plus"></i> Add Products</a></li>
                 <li><a href="#"><i class="fa fa-pencil-square-o"></i> Manage Products</a></li>

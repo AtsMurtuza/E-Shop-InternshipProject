@@ -48,7 +48,10 @@
 		{
 			global $querymaker;
 			$arr = array();
-			$arr[] = func_get_Arg(1);
+			for($i=1;$i<func_num_args();$i++)
+			{
+				$arr[] = func_get_Arg($i);
+			}
 			$query = $querymaker->makeQuery($query,$arr);
 			$result = self::perform_sql($query);
 			return $result;

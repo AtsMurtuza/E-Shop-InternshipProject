@@ -1,3 +1,13 @@
+<?php
+	defined('DS')?null : define('DS','/');
+	defined('SITE_ROOT')?null:define('SITE_ROOT',DS.'wamp'.DS.'www'.DS.'E-Shop-InternshipProject');
+
+	require_once(SITE_ROOT.'/model/ShopSessionModel.php');
+	if($shop_session->is_logged_in())
+	{
+		FunctionalUtility::redirect_to('Home.php');
+	}
+?>
 <html>
 	<head>
 		<title>E-Shop</title>

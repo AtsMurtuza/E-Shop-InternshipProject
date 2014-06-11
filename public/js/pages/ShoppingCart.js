@@ -1,4 +1,46 @@
 		var cartProdArray =[];
+		function addCartDb(prodid)
+		{
+			var ajxr = $.post('../../controller/AddCart.php',{product_id:prodid},function(data){
+				//alert(data);
+			});
+		}
+		
+		function removeCartDb(prodid)
+		{
+			var ajxr = $.post('../../controller/DeleteCart.php',{product_id:prodid},function(data){
+				//alert(data);
+			});
+		}
+		function updateAddCartDb(prodid)
+		{	
+			var qty;
+			$('#x4 > tbody  > tr').each(function() {	
+				if($(this).attr('prod-data')==prodid)
+				{
+					var x = $(this).find('.qtnum');
+					qty = parseInt(x.html());		
+				}
+			});
+			//alert(prodid + " "+ qty);
+			var ajxr = $.post('../../controller/UpdateCart.php',{product_id:prodid,quantity:qty},function(data){
+				//alert(data);
+			});
+		}
+		function updateCartDb(linkvar)
+		{
+			var qty,prodid;
+			var x = $(linkvar).parents("tr");
+			x.each(function(){
+				prodid = x.attr('prod-data');
+				qty = parseInt(x.find('.qtnum').html());
+				
+			});
+			//alert(prodid + " "+ qty);
+			var ajxr = $.post('../../controller/UpdateCart.php',{product_id:prodid,quantity:qty},function(data){
+				//alert(data);
+			});
+		}
 		function cartItemsNumber()
 		{
 			$("#cartnumb").html(cartProdArray.length);
@@ -7,6 +49,7 @@
 		{
 			cartProdArray.splice( $.inArray(key, cartProdArray), 1 );
 			cartItemsNumber();
+			removeCartDb(key);
 		}
 		function addProductKeyCart(key)
 		{
@@ -18,19 +61,23 @@
 			}
 			else
 			{
+			
 				$('#x4 > tbody  > tr').each(function() {
 					
 					if($(this).attr('prod-data')==key)
 					{
 						var x = $(this).find('.qtnum');
 						x.html(parseInt(x.html()) + 1);
+						
 					}
 				});
+				
 				cartItemsNumber();
 				return false;
 			}
 			
 		}
+		
 		function addQuantityToCart(linkvar)
 		{
 			var x = $(linkvar).parents("tr");
@@ -47,6 +94,7 @@
 				if(parseInt(z.html())>1)
 				{
 					z.html(parseInt(z.html()) - 1);
+					
 				}
 				else
 				{
@@ -63,56 +111,43 @@
 				x.remove();
 				deleteProductKeyCart(x.attr('prod-data'));
 			});
+			
 		}
-		$('.addqt').click(function(){
-			addQuantityToCart($(this));
-		});
-		$('.rmqt').click(function(){
-			removeFromCart($(this));
-		});
-		$('.subqt').click(function(){
-			subQuantityFromCart($(this));
-		});
 		
 		function addcartrow(productname,prodid)
 		{
-			
+				
 				var addbtn = $('<a  href="#" class="addqt" style="color:green"></a>').html('<i class="fa fa-plus"></i>');
-				addbtn.click(function(){
-					addQuantityToCart($(this));
-				});
 				var subbtn = $('<a class="subqt" href="#" style="color:orange"></a>').html('<i class="fa fa-minus"></i>');
-				subbtn.click(function(){
-					subQuantityFromCart($(this));
-				});
 				var rmbtn = $('<a href="#" class="rmqt" style="color:red"></a>').append('<i class="fa fa-times"></i>');
-				rmbtn.click(function(){
-					removeFromCart($(this));
-				});
 				var tempi = $('<h4></h4>').append(addbtn);
 				var tempi2 = $('<h4></h4>').append(subbtn);
 				var tempj = $('<td></td>').append(tempi);
 				tempj.append(tempi2);
-				
 				var tempi3 = $('<h4></h4>').append(rmbtn);
 				var tempi4 = $('<td></td>').append(tempi3);
 				var testrow = $( "<tr prod-data="+ prodid +"></tr>" ).append( tempj );
 				testrow.append('<td><h4>'+productname+'</h4></td><td><h4 class="qtnum">1</h4></td>')
 				testrow.append(tempi4).appendTo( $("#x4"));
+				
 		}
 		
 		$(".dropzone").droppable({
 			drop: function( event, ui ){			
 				if(addProductKeyCart(ui.draggable.find('.productdraggable').attr('data-prod')))
 				{
+					addCartDb(ui.draggable.find('.productdraggable').attr('data-prod'));
 					addcartrow(ui.draggable.find('.prodname').html(),ui.draggable.find('.productdraggable').attr('data-prod'));
+				}
+				else
+				{
+					updateAddCartDb(ui.draggable.find('.productdraggable').attr('data-prod'));
 				}
 			}
 		});
 		
 		function productjson2(data)
 		{
-			alert(data);
 			var obj = jQuery.parseJSON(data);
 			jQuery.each(obj,function(key,value){
 				
@@ -142,19 +177,7 @@
 				panelbody.append(prodbody.html());
 				fullprod.append(panelbody);
 				$("#prodgrid").append(fullprod);
-				
-				
 			});
-			$(".shopbtn").click(function(){
-					var parentdiv=$(this).parents('.productdraggable');
-					var productid = parentdiv.attr('data-prod');
-					var productname = parentdiv.find('.prodname').html();
-					if(addProductKeyCart(productid))
-					{
-						addcartrow(productname,productid);
-					}
-				});
-		
 		}
 		
 		function productjson(data)
@@ -181,16 +204,6 @@
 				$("#prodgrid").append(fullprod);
 			
 			});
-			$(".shopbtn").click(function(){
-					var parentdiv=$(this).parents('.productdraggable');
-					var productid = parentdiv.attr('data-prod');
-					var productname = parentdiv.find('.prodname').html();
-					if(addProductKeyCart(productid))
-					{
-						addcartrow(productname,productid);
-					}
-				});
-		
 		}
 		function togcart(){
 			if($('#x2').attr('dim-vis')=='1')
@@ -207,4 +220,46 @@
 		$('#x1').click(function (){
 			togcart();
 		});
+		$(document).on('click','.addqt',function(){
+			addQuantityToCart($(this));
+			updateCartDb($(this));
+			
+		});
+		$(document).on('click','.rmqt',function(){
+			removeFromCart($(this));
+		});
+		$(document).on('click','.subqt',function(){
+			subQuantityFromCart($(this));
+			updateCartDb($(this));
+			
+		});
+		$(document).on('click','.shopbtn',function(){
+			var parentdiv=$(this).parents('.productdraggable');
+			var productid = parentdiv.attr('data-prod');
+			var productname = parentdiv.find('.prodname').html();
+			if(addProductKeyCart(productid))
+			{
+				addCartDb(productid);
+				addcartrow(productname,productid);
+			}
+			else
+			{
+				updateAddCartDb(productid);
+			}
+			alert('Product : '+productname+' Is Added To Your Cart');
+		});
+		function populateCart(data)
+		{
+			var obj = jQuery.parseJSON(data);
+			jQuery.each(obj,function(key,value){
+				if(addProductKeyCart(value.product_id))
+				{
+					addcartrow(value.product_name,value.product_id);
+				}
+				for(var i=1;i<parseInt(value.quantity);i++)
+				{
+					addProductKeyCart(value.product_id);
+				}
+			});
+		}
 		
