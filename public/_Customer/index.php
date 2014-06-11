@@ -67,7 +67,7 @@
 		<div class="panel panel-primary">
 		<div class="list-group">
 		<a href="ProductGrid.php" class="list-group-item"><h4 style="text-align:center">Electronics<span class="fa fa-bolt pull-right"></span></h4></a>
-		<a href="#" class="list-group-item"><h4 style="text-align:center">Watches<span class="fa fa-clock-o pull-right"></span></h4></a>
+		<a href="../../controller/PlaceOrder.php" class="list-group-item"><h4 style="text-align:center">Watches<span class="fa fa-clock-o pull-right"></span></h4></a>
 		<a href="#" class="list-group-item"><h4 style="text-align:center">Clothes<span class="fa fa-male pull-right"></span></h4></a>
 		<a href="#" class="list-group-item"><h4 style="text-align:center">Books<span class="fa fa-book pull-right"></span></h4></a>
 		<a href="#" class="list-group-item"><h4 style="text-align:center">Footwear<span class="fa fa-paw pull-right"></span></h4></a>

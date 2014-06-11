@@ -24,5 +24,16 @@ defined('ADD_DISCOUNT_COUPON') ? null : define('ADD_DISCOUNT_COUPON'," INSERT IN
 defined('ADD_DEALS') ? null : define('ADD_DEALS'," INSERT INTO `deals`(`shop_id`, `product_id`,`expiry_date`,`buy`,`get`)VALUES ('?','?','?','?','?');");
 defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_id`, `product_description`,`category_id` ,`supplier_id`,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` ,`shop_name` FROM `product`,`tb_shop` where `tb_shop`.`shop_id` = `product`.`supplier_id`;");
 defined('SEARCH_SHOPID') ? null : define('SEARCH_SHOPID',"select * from `tb_shop` where `shop_id`='?' ;");
+defined('PRODUCT_LIST') ? null :define('PRODUCT_LIST',"SELECT `product_id`, `category_id` ,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` FROM `product`;");
+defined('ADD_ORDER') ? null : define('ADD_ORDER',"INSERT INTO `orders`(`customer_id`, `payment_id`, `shipper_id`, `tax_order`, `time_stamp`, `transaction_status`, `payment_date`, `total`) VALUES ('?','?','?','?','?','?','?','?');");
+defined('ADD_ORDER_DETAIL') ? null : define('ADD_ORDER_DETAIL',"INSERT INTO `orderdetails`(`product_id`, `price`, `quantity`, `discount`, `ship_date`, `order_id`) VALUES ('?','?','?','?','?','?');");
+defined('GET_ORDER') ? null :define ('GET_ORDER',"SELECT `order_id`, `customer_id`, `payment_id`, `shipper_id`, `tax_order`, `time_stamp`, `transaction_status`, `payment_date`, `total` FROM `orders` WHERE `shipper_id` = ?;");
+defined('PRODUCT_BY_ID') ? null :define('PRODUCT_BY_ID',"SELECT `product_id`, `product_description`,`category_id` ,`supplier_id`,`product_name`, `unit_price`,`unit_in_stock`,`product_ranking` ,`shop_name` FROM `product`,`tb_shop` where `product_id`='?' and `tb_shop`.`shop_id` = `product`.`supplier_id`;");
+
+
+defined('SAVE_CART') ? null : define('SAVE_CART'," INSERT INTO `shoppingcart`(`user_id`, `product_id`, `quantity`) VALUES ('?','?','?');");
+defined('SHOW_CART') ? null : define('SHOW_CART'," select * , `product`.`product_name` from `shoppingcart`,`product` where `product`.`product_id` = `shoppingcart`.`product_id` and `user_id` = '?'");
+defined('DELETE_CART') ? null : define('DELETE_CART'," DELETE FROM `shoppingcart` where `user_id` ='?' and `product_id`='?';");
+defined('UPDATE_CART') ? null : define('UPDATE_CART'," UPDATE `shoppingcart` set `quantity`='?' where `user_id` ='?' and `product_id`='?';");
 
 ?>

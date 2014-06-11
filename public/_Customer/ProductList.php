@@ -2,6 +2,8 @@
 	<head>
 		<title>E-Shop</title>
 		<?php require_once('_css-include.php');?>
+		<link href="../css/photobox.css" rel="stylesheet">
+		<link href="../css/photoboxstyles.css" rel="stylesheet">
 		<!--Page Specific -->
 		
 	</head>
@@ -13,9 +15,12 @@
 	</div>
 	<?php require_once('ShoppingCart.php');?>
 	<input type="hidden" id="testname">
+	<?php require_once('ProductModelView.php');?>
 	</body>
 	<?php require_once('_js-include.php');?>
 	<!--Page Specific JS -->
 	<script type="text/javascript" src="../js/pages/ShoppingCart.js"></script>
     <script type="text/javascript" src="../js/pages/ProductList.js"></script>
+	<script type="text/javascript" src="../js/pages/ProductModal.js"></script>
+	<script type="text/javascript" src="../js/pages/jquery.photobox.js"></script>
 	</html>

@@ -55,7 +55,10 @@ class Product extends DbObject
 	function getProducts(){
 		$result = self::find_all("PRODUCT_LIST");
 		return $result;
-	
+	}
+	function getProductById($prodid){
+		$result = self::find_by_id("PRODUCT_BY_ID",$prodid);
+		return $result;
 	}
 	
 }
